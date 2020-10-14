@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".registroActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fondo"
-        >
+        android:background="@drawable/fondo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,8 +21,8 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="207dp"
-                android:layout_height="195dp"
+                android:layout_width="163dp"
+                android:layout_height="153dp"
                 android:layout_marginBottom="40dp"
                 app:srcCompat="@drawable/developeru" />
 
@@ -35,7 +33,58 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/user"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#F3EBEB"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#F1F1F1" />
+
+            <EditText
+                android:id="@+id/edtApellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/user"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#F3EBEB"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#F1F1F1" />
+
+            <EditText
+                android:id="@+id/edtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
                 android:drawableLeft="@drawable/icon_email"
+                android:ems="10"
+                android:hint="Correo"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#F3EBEB"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#F1F1F1" />
+
+            <EditText
+                android:id="@+id/edtUID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/user"
                 android:ems="10"
                 android:hint="Usuario"
                 android:inputType="textPersonName"
@@ -64,18 +113,6 @@
                 android:textColorLink="#FFFFFF" />
 
             <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="15dp"
-                android:background="#4CAF50"
-                android:text="Iniciar Sesion"
-                android:textColor="#FFF"
-                android:textSize="18sp" />
-
-            <Button
                 android:id="@+id/btnRegistro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,5 +127,4 @@
         </LinearLayout>
 
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
