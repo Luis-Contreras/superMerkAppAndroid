@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Seleccion"
+            android:label="@string/title_activity_seleccion"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".ScreenPlash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +25,7 @@
         </activity>
         <activity android:name=".registroActivity" />
         <activity android:name=".PrincipalActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

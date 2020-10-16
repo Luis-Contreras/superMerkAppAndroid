@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
-                    Intent intent = new Intent(getApplicationContext(), PrincipalActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), Seleccion.class);
+                    intent.putExtra("datos", response);
                     startActivity(intent);
                 }else{
                     Toast.makeText(MainActivity.this, "Usuario o Contraseña Incorrectos", Toast.LENGTH_SHORT).show();

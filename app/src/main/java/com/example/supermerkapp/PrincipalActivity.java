@@ -3,6 +3,7 @@ package com.example.supermerkapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.json.JSONStringer;
 
 import java.util.Arrays;
@@ -43,26 +45,46 @@ public class PrincipalActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 if(!response.isEmpty()){
 
-                    JSONArray temp = null;
+                    JSONArray jsonArray = null;
                     try {
-                        temp = new JSONArray(response);
+                        jsonArray = new JSONArray(response);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    try {
-                        String[] mArray = temp.join(":").split(":");
+                    String[] strArr = new String[jsonArray.length()];
 
-                        /*String[][] datos = {
-                                {"Arroz Roa","Libra de arroz roa de 500gr, super premuim ideal para compartir con la familia, rendidora","Libra de arroz roa 500gr","50","1500"},
-                                {"Panela Caribe","Panela Caribe, dulce de 500gr, traida directamente desde cali, ideal para aguapanela, limbonadas","Panela Caribe 500gr","30","3000"},
-                                {"Pañales pequeñin","Pañales pequeñin, Etapa 1 y 2, perfecta para bendiciones traviesas que no se quedan quietas, absorve de todo, con eucalito","Pañales pequeñin etapa 3","40","1200"}
-                        };*/
-
-                        lista.setAdapter(new Adaptador(thisContext, mArray ));
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        try {
+                            strArr[i] = jsonArray.getString(i);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
+
+                    for(int i = 0; i < strArr.length; i++){
+                        strArr[i] = strArr[i].replace("[","");
+                        strArr[i] = strArr[i].replace("\"","");
+                        strArr[i] = strArr[i].replace("]","");
+                        strArr[i] = strArr[i].replace("{","");
+                        strArr[i] = strArr[i].replace("}","");
+                        strArr[i] = strArr[i].replace(":","");
+                        strArr[i] = strArr[i].replace("nombre","");
+                        strArr[i] = strArr[i].replace("descripcion","");
+                        strArr[i] = strArr[i].replace("retrato","");
+                        strArr[i] = strArr[i].replace("img","");
+                        strArr[i] = strArr[i].replace("stock","");
+                        strArr[i] = strArr[i].replace("retrato","");
+                        strArr[i] = strArr[i].replace("precio","");
+                    }
+
+                    String[][] matrix = new String[strArr.length][];
+                    int r = 0;
+                    for (String row : strArr) {
+                        matrix[r++] = row.split(",");
+                    }
+
+                    lista.setAdapter(new Adaptador(thisContext, matrix ));
+
                 }else{
                     Toast.makeText(PrincipalActivity.this, "No hay productos disponibles", Toast.LENGTH_SHORT).show();
                 }

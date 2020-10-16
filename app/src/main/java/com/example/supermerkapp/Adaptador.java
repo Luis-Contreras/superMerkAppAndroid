@@ -2,6 +2,7 @@ package com.example.supermerkapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +18,10 @@ public class Adaptador extends BaseAdapter{
     private static LayoutInflater inflater = null;
 
     Context context;
-    String[] datos;
+    String[][] datos;
     Adaptador thisContext = this;
 
-    public Adaptador(Context conexto, String[] datos){
+    public Adaptador(Context conexto, String[][] datos){
         this.context =  conexto;
         this.datos = datos;
 
@@ -39,9 +40,9 @@ public class Adaptador extends BaseAdapter{
         ImageView imgList = vista.findViewById(R.id.imgList);
 
 
-        tvNombre.setText(datos[i]);
-        tvDescripcion.setText(datos[i]);
-        tvPrecio.setText(datos[i]);
+        tvNombre.setText(Html.fromHtml(datos[i][0]));
+        tvDescripcion.setText(Html.fromHtml(datos[i][2]));
+        tvPrecio.setText("$ " + datos[i][5]);
         /*imgList.setImageResource(datosImg[i]);*/
 
         /*imgList.setTag(i);
