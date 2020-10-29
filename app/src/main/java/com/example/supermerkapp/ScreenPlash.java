@@ -36,8 +36,8 @@ public class ScreenPlash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(ScreenPlash.this, MainActivity.class);
-                startActivity(intent);
+               // Intent intent = new Intent(ScreenPlash.this, boarding_screen.class);
+                startActivity(new Intent(getApplicationContext(),boarding_screen.class));
                 finish();
             }
         }, 4000);
