@@ -114,7 +114,7 @@ public class boarding_screen extends AppCompatActivity {
             }
         }
         if (index == onboardingAdapter.getItemCount() -1){
-            buttonOnboardingAction.setText("Start");
+            buttonOnboardingAction.setText("Iniciar");
         }else{
             buttonOnboardingAction.setText("Siguiente");
         }

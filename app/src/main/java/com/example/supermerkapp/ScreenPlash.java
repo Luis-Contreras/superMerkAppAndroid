@@ -23,13 +23,13 @@ public class ScreenPlash extends AppCompatActivity {
         Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_arriba);
         Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.desplazamiento_abajo);
 
-        TextView tvTitle = findViewById(R.id.tvTitle);
+        ImageView imgTitle = findViewById(R.id.imgTitle);
         TextView tvVersion = findViewById(R.id.tvVersion);
         ImageView imgLogoMerk = findViewById(R.id.imgLogoMerk);
 
 
 
-        tvTitle.setAnimation(animacion2);
+       imgTitle.setAnimation(animacion2);
         tvVersion.setAnimation(animacion2);
         imgLogoMerk.setAnimation(animacion1);
 
