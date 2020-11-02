@@ -12,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".boarding_screen">
-
-        </activity>
-        <activity
-            android:name=".Seleccion"
-            android:label="@string/title_activity_seleccion"
-             />
-        <activity android:name=".ScreenPlash">
+        <activity android:name=".NavigationApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".boarding_screen"></activity>
+        <activity
+            android:name=".Seleccion"
+            android:label="@string/title_activity_seleccion" />
+        <activity android:name=".ScreenPlash">
+
         </activity>
         <activity android:name=".registroActivity" />
         <activity android:name=".PrincipalActivity" />
