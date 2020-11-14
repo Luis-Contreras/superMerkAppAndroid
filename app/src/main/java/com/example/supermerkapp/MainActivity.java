@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarUsuario( "http://192.168.1.3/ApiSupermerkApp/validarUsuario.php");
+                validarUsuario( "http://192.168.1.4/ApiSupermerkApp/validarUsuario.php");
             }
         });
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
-                    Intent intent = new Intent(getApplicationContext(), Seleccion.class);
+                    Intent intent = new Intent(getApplicationContext(), NavigationApp.class);
                     intent.putExtra("datos", response);
                     startActivity(intent);
                 }else{

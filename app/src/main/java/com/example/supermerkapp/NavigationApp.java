@@ -10,6 +10,7 @@ import android.view.MenuItem;
 
 import com.example.supermerkapp.fragments.HomeFragment;
 import com.example.supermerkapp.fragments.MapFragment;
+import com.example.supermerkapp.fragments.MapsFragment;
 import com.example.supermerkapp.fragments.ShopCarFragment;
 import com.example.supermerkapp.fragments.UserFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,19 +18,26 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class NavigationApp extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
     FragmentTransaction transaction;
-    Fragment HomeFragment ,MapFragment ,ShopCarFragment,userFragment;
+    Fragment HomeFragment ,MapsFragment ,ShopCarFragment,userFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_app);
 
+        String datos = getIntent().getStringExtra("datos");
+
+        Bundle bundle = new Bundle();
+        bundle.putString("Usuario", datos);
+
         HomeFragment = new HomeFragment();
         ShopCarFragment = new ShopCarFragment();
-        MapFragment = new MapFragment();
+        MapsFragment = new MapsFragment();
         userFragment = new UserFragment();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.contenedorFragments,MapFragment).commit();
+        userFragment.setArguments(bundle);
+
+        getSupportFragmentManager().beginTransaction().add(R.id.contenedorFragments,MapsFragment).commit();
 
 
         bottomNavigation=(BottomNavigationView) findViewById(R.id.bottomnav);
@@ -42,7 +50,7 @@ public class NavigationApp extends AppCompatActivity {
                     transaction.replace(R.id.contenedorFragments,HomeFragment).commit();
                 }
                 if(menuItem.getItemId()== R.id.nav_map){
-                    transaction.replace(R.id.contenedorFragments,MapFragment).commit();
+                    transaction.replace(R.id.contenedorFragments,MapsFragment).commit();
                 }
                 if(menuItem.getItemId()== R.id.nav_user){
                     transaction.replace(R.id.contenedorFragments,userFragment).commit();
