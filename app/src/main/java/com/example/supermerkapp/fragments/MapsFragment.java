@@ -64,7 +64,7 @@ public class MapsFragment extends Fragment {
             ubicacion();
             LatLng myPosition = new LatLng(6.2895187, -75.5969561);
             googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.ubicacion)).position(myPosition).title(" Mi ubicacion "));
-            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(6.2895187, 75.5969561), 13));
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(6.2895187, -75.5969561), 13));
 
 
             for (int i = 0; i < 20; i++) {
