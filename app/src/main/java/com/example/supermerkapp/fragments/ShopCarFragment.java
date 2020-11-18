@@ -3,12 +3,24 @@ package com.example.supermerkapp.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.supermerkapp.ListAdapter;
+import com.example.supermerkapp.ListAdapterShop;
+import com.example.supermerkapp.ListElement;
+import com.example.supermerkapp.ListElementShop;
 import com.example.supermerkapp.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +28,11 @@ import com.example.supermerkapp.R;
  * create an instance of this fragment.
  */
 public class ShopCarFragment extends Fragment {
+
+    List<ListElementShop> elementShopList;
+    RecyclerView recyclerViewProductosShop;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,6 +78,51 @@ public class ShopCarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shop_car, container, false);
+        View vista = inflater.inflate(R.layout.fragment_shop_car, container, false);
+        elementShopList = new ArrayList<>();
+        recyclerViewProductosShop = vista.findViewById(R.id.listRecyclerViewShop);
+        recyclerViewProductosShop.setLayoutManager(new LinearLayoutManager(getContext()));
+        init();
+        ListAdapterShop listAdapterShop = new ListAdapterShop(elementShopList,getContext());
+        recyclerViewProductosShop.setAdapter(listAdapterShop);
+
+       /* btnsumar = vista.findViewById(R.id.btnsumar);
+        btnrestar = vista.findViewById(R.id.btnrestar);
+        contador = vista.findViewById(R.id.contador);*/
+        /*    btnsumar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contadorP++;
+                contador.setText(Integer.toString(contadorP));
+            }
+        });
+        btnrestar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contadorP--;
+                contador.setText(Integer.toString(contadorP));
+            }
+        });
+        contador.setText(Integer.toString(contadorP));*/
+        return vista;
+    }
+    public  void init   (){
+        //elementList = new ArrayList<>();
+        elementShopList.add(new ListElementShop("Gaseosa","$4000"));
+        elementShopList.add(new ListElementShop("Aceite","5000"));
+        elementShopList.add(new ListElementShop("Jabon","$4500"));
+        elementShopList.add(new ListElementShop("Azucar","$6000"));
+        elementShopList.add(new ListElementShop("Leche","$3000"));
+
+
+
+
+        //recyclerView.setHasFixedSize(true);
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        //recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+
+
+
     }
 }

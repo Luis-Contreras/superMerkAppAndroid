@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    app:cardBackgroundColor="@color/colorTargets"
+    app:cardCornerRadius="20dp"
+    app:cardMaxElevation="1dp"
+    app:cardElevation="2dp"
+    app:contentPadding="9dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    app:contentPaddingBottom="0dp"
+
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/contador"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="90dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/contadoredittext"
+            android:gravity="center"
+            android:hint="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:paddingBottom="12dp"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/iconP"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="0dp"
+            app:srcCompat="@drawable/arroz"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:orientation="vertical"
+                >
+
+        <TextView
+            android:id="@+id/nombreP"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+            android:layout_marginLeft="7dp"
+            android:text="Nombre P"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center|top"
+            android:layout_weight="20"
+
+            />
+
+        <TextView
+            android:id="@+id/precioP"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="  $0000"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:layout_gravity="center|top"
+
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|right"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:layout_width="41dp"
+            android:layout_height="41sp"
+            android:layout_gravity="right"
+            android:background="@drawable/desingbottoms"
+            android:fontFamily="@font/montserrat"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="X"
+            android:textSize="13dp"
+            android:textStyle="bold"
+
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btnrestar"
+            android:layout_width="41dp"
+            android:layout_height="48sp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="96dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="9dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/montserrat"
+            android:text="-"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|right"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/btnsumar"
+            android:layout_width="41dp"
+            android:layout_height="48sp"
+            android:layout_gravity="right"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="108dp"
+            android:layout_marginLeft="90dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="@font/montserrat"
+            android:text="+"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="108dp" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+    
