@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -94,10 +92,13 @@ public class HomeFragment extends Fragment {
 
         String [][] matriz = {
 
-                {"Coca cola Litro", "$3000"},
+                {"Coca Cola Litro", "$3000"},
                 {"Libra de arroz Roa", "$1300"},
-                {"lentejas", "$1000"},
-                {"Frijoles", "$3000"}
+                {"Lentejas", "$1000"},
+                {"Frijoles", "$3000"},
+                {"Azucar", "$1500"},
+                {"Sal", "$1000"},
+                {"Colgate", "$7000"}
 
         };
 

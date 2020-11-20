@@ -49,33 +49,21 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/title"
-        android:layout_width="231dp"
-        android:layout_height="112dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@id/guidelLeft"
-        app:layout_constraintRight_toRightOf="@id/guideRight"
-        app:layout_constraintTop_toTopOf="@id/guidetop"
+            android:id="@+id/title"
+            android:layout_width="231dp"
+            android:layout_height="112dp"
+            app:layout_constraintTop_toTopOf="@id/guidetop"
 
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/title" />
-
+            app:srcCompat="@drawable/title" android:layout_marginTop="88dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="224dp"
-        android:layout_height="148dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toBottomOf="@id/guideBottom"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@id/guidelLeft"
-        app:layout_constraintRight_toRightOf="@id/guideRight"
-        app:layout_constraintTop_toTopOf="@id/guidetop"
+            android:id="@+id/imageView"
+            android:layout_width="224dp"
+            android:layout_height="148dp"
 
-        app:layout_constraintVertical_bias="0.222"
-        app:srcCompat="@drawable/logo" />
-
+            app:srcCompat="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideusuario"
         android:layout_width="wrap_content"
@@ -145,56 +133,43 @@
         app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="141dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/desingbottoms"
-        android:fontFamily="@font/montserrat"
-        android:text="Iniciar Sesion"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="13sp"
-        app:backgroundTint="#FFFFFF"
-        app:backgroundTintMode="multiply"
-        app:layout_constraintBottom_toBottomOf="@id/edtUsuario"
-        app:layout_constraintHorizontal_bias="0.005"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidepass"
-        app:layout_constraintVertical_bias="0.0" />
+            android:id="@+id/btnLogin"
+            android:layout_width="141dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/desingbottoms"
+            android:fontFamily="@font/montserrat"
+            android:text="Iniciar Sesion"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="@id/edtUsuario"
+            app:layout_constraintTop_toTopOf="@id/guidepass"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnRegistro"/>
 
     <Button
-        android:id="@+id/btnRegistro"
-        android:layout_width="141dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="220dp"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/desingbottoms"
-        android:fontFamily="@font/montserrat"
-        android:text="Registrarse"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="13sp"
-        app:backgroundTint="#FFFFFF"
-        app:backgroundTintMode="multiply"
-        app:layout_constraintBottom_toBottomOf="@id/edtUsuario"
-        app:layout_constraintHorizontal_bias="0.005"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guidepass"
-        app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/btnRegistro"
+            android:layout_width="141dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/desingbottoms"
+            android:fontFamily="@font/montserrat"
+            android:text="Registrarse"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="@id/edtUsuario"
+            app:layout_constraintTop_toTopOf="@id/guidepass"
+            app:layout_constraintVertical_bias="0.0"
 
 
-        />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.859"/>
     <TextView
 
         android:layout_width="wrap_content"

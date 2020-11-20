@@ -1,15 +1,14 @@
 package com.example.supermerkapp;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.example.supermerkapp.fragments.HomeFragment;
-import com.example.supermerkapp.fragments.MapFragment;
 import com.example.supermerkapp.fragments.MapsFragment;
 import com.example.supermerkapp.fragments.ShopCarFragment;
 import com.example.supermerkapp.fragments.UserFragment;

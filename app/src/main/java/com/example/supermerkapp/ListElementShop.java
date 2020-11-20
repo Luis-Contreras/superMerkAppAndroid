@@ -5,10 +5,16 @@ public class ListElementShop {
     // public ImageView imgP;
     public String nameP;
     public String precioP;
+    public int  cantidad=0;
 
-    public ListElementShop(String nameP, String precioP) {
+
+
+
+
+    public ListElementShop(String nameP, String precioP ) {
         this.nameP = nameP;
         this.precioP = precioP;
+
     }
 
     public String getNameP() {

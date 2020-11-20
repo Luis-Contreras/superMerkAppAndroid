@@ -14,7 +14,7 @@ import com.example.supermerkapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link UserFragment#newInstance} factory method to
+ * Use the  factory method to
  * create an instance of this fragment.
  */
 public class UserFragment extends Fragment {
@@ -58,6 +58,11 @@ public class UserFragment extends Fragment {
             arreglo[i] = arreglo[i].replace("[","");
             arreglo[i] = arreglo[i].replace("\"","");
             arreglo[i] = arreglo[i].replace("]","");
+            arreglo[i] = arreglo[i].replace("}","");
+            arreglo[i] = arreglo[i].replace("{","");
+            arreglo[i] = arreglo[i].replace("name:","");
+            arreglo[i] = arreglo[i].replace("lastName:","");
+            arreglo[i] = arreglo[i].replace("email:","");
         }
 
 

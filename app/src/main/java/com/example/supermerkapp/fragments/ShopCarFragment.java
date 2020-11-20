@@ -1,26 +1,17 @@
 package com.example.supermerkapp.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 
-import com.example.supermerkapp.ListAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.supermerkapp.ListAdapterShop;
-import com.example.supermerkapp.ListElement;
 import com.example.supermerkapp.ListElementShop;
 import com.example.supermerkapp.R;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,11 +108,13 @@ public class ShopCarFragment extends Fragment {
 
         String [][] matriz = {
 
-                {"Coca cola Litro", "$3000"},
+                {"Coca Cola Litro", "$3000"},
                 {"Libra de arroz Roa", "$1300"},
-                {"lentejas", "$1000"},
-                {"Frijoles", "$3000"}
-
+                {"Lentejas", "$1000"},
+                {"Frijoles", "$3000"},
+                {"Azucar", "$1500"},
+                {"Sal", "$1000"},
+                {"Colgate", "$7000"}
         };
 
 
