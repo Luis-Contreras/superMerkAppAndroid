@@ -67,9 +67,33 @@ public class MapsFragment extends Fragment {
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(6.2895187, -75.5969561), 13));
 
 
-            for (int i = 0; i < 20; i++) {
-                myPosition = new LatLng(6.2876321, -75.594591);
-                googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.compras)).position(myPosition).title(" Tiendas "));
+
+            String [][] matriz = {
+
+                    {"6.2876321", "-75.594591", "tienda de pedro"},
+                    {"6.2810216", "-75.5881251", "tienda Bello Horizonte"},
+                    {"6.2828965", "-75.5904979", "Mega Burger"},
+                    {"6.2831077", "-75.5924211", "Doña Vilma"},
+                    {"6.2838225", "-75.59279", "Brosty pollo"},
+                    {"6.2861296", "-75.5897562", "tienda de carlos"},
+                    {"6.2859081", "-75.5881562", "tienda de pedro"},
+                    {"6.2859328", "-75.5862435", "Pizza Loco"},
+                    {"6.2851638", "-75.5861014", "Margarina Gurmet"},
+                    {"6.2853051", "-75.583952", "Parche Cool"},
+            };
+
+
+
+
+
+
+            for (int i = 0; i < matriz.length; i++) {
+
+                    myPosition = new LatLng( Double.parseDouble(matriz[i][0]), Double.parseDouble(matriz[i][1]));
+                    googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.compras)).position(myPosition).title(matriz[i][2]));
+
+
+
             }
         }
 

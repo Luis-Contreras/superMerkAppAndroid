@@ -33,7 +33,7 @@ public class PrincipalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         lista = findViewById(R.id.lvLista);
-        getProductos("http://192.168.1.4/ApiSupermerkApp/getProductos.php");
+        getProductos("http://192.168.1.1/ApiSupermerkApp/getProductos.php");
 
 
     }

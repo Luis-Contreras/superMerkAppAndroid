@@ -39,7 +39,7 @@ public class registroActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                guardarUsuario( "http://192.168.1.4/ApiSupermerkApp/guardarUsuario.php");
+                guardarUsuario( "http://192.168.1.1/ApiSupermerkApp/guardarUsuario.php");
             }
         });
     }

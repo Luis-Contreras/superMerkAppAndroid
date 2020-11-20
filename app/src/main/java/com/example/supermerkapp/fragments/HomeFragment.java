@@ -91,18 +91,22 @@ public class HomeFragment extends Fragment {
     }
     public  void init   (){
         //elementList = new ArrayList<>();
-        elementList.add(new ListElement("Gaseosa","$4000"));
-        elementList.add(new ListElement("Pasta","$1200"));
-        elementList.add(new ListElement("Frijol","$4300"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
-        elementList.add(new ListElement("Aceite 1000ml","$5000"));
+
+        String [][] matriz = {
+
+                {"Coca cola Litro", "$3000"},
+                {"Libra de arroz Roa", "$1300"},
+                {"lentejas", "$1000"},
+                {"Frijoles", "$3000"}
+
+        };
+
+
+        for (int i = 0; i < matriz.length; i++) {
+
+            elementList.add(new ListElement(matriz[i][0],matriz[i][1]));
+
+        }
 
 
 

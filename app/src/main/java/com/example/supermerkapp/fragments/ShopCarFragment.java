@@ -18,6 +18,9 @@ import com.example.supermerkapp.ListAdapterShop;
 import com.example.supermerkapp.ListElement;
 import com.example.supermerkapp.ListElementShop;
 import com.example.supermerkapp.R;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,12 +111,25 @@ public class ShopCarFragment extends Fragment {
     }
     public  void init   (){
         //elementList = new ArrayList<>();
-        elementShopList.add(new ListElementShop("Gaseosa","$4000"));
-        elementShopList.add(new ListElementShop("Aceite","5000"));
-        elementShopList.add(new ListElementShop("Jabon","$4500"));
-        elementShopList.add(new ListElementShop("Azucar","$6000"));
-        elementShopList.add(new ListElementShop("Leche","$3000"));
 
+
+
+
+        String [][] matriz = {
+
+                {"Coca cola Litro", "$3000"},
+                {"Libra de arroz Roa", "$1300"},
+                {"lentejas", "$1000"},
+                {"Frijoles", "$3000"}
+
+        };
+
+
+        for (int i = 0; i < matriz.length; i++) {
+
+            elementShopList.add(new ListElementShop(matriz[i][0],matriz[i][1]));
+
+        }
 
 
 

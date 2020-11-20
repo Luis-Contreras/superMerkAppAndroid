@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarUsuario( "http://192.168.1.4/ApiSupermerkApp/validarUsuario.php");
+                validarUsuario( "http://192.168.1.1/ApiSupermerkApp/validarUsuario.php");
             }
         });
 
